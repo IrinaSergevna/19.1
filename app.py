@@ -1,5 +1,4 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
 
 # Для начала определим настройки запуска
 hostName = "localhost" # Адрес для доступа по сети
@@ -10,7 +9,6 @@ class MyServer(BaseHTTPRequestHandler):
         Специальный класс, который отвечает за
         обработку входящих запросов от клиентов
     """
-    # filename = "19_1.html"
 
     def get_context_data(self):
         with open("19_1.html", "r", encoding="utf-8") as file:
